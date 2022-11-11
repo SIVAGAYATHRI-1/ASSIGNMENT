@@ -1,3 +1,162 @@
 <html>
-    <head>github</head>
- </html>
+    <head>
+       
+    </head>
+
+    <style>
+        body{
+            background:url(form_img.jpg);
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .FORM{
+            width:400px;
+            height:600px;
+            padding: 20px;
+            background-color: rgba(255, 166, 0, 0.359);
+            align-items: center;
+            margin-top: 100px;
+            margin-left: 600px;
+            margin-bottom: 300px;
+            margin-right: 500px;
+           
+        }
+       .form h1{
+        position:relative
+       }
+       .form button{
+        padding: 10px;
+        background-color: blue;
+        text-align: center;
+        width:100
+       }
+       .form input{
+        height:40px;
+        width:250px;
+        padding:20px;
+        margin-bottom: 30px;
+       }
+       .dropdown{
+        padding-bottom: 10px;
+
+       }
+      
+      
+
+    </style>
+
+    <script>
+        function storedata() {
+                var name=document.getElementById('name');
+                
+                var email =document.getElementById('mail');
+                
+                var password =document.getElementById('password');
+                var year=document.getElementById('year');
+                if (name == "" ) {
+                    window.alert("Please your name");
+                    //email.focus();
+                    return false;
+                }
+                
+                
+                if (email == "" ) {
+                    window.alert("Please enter a valid e-mail address.");
+                    //email.focus();
+                    return false;
+                }
+                
+                if (password == "") {
+                    alert("Please enter your password");
+                    //password.focus();
+                    return false;
+                }
+                if(password.length <6){
+                    alert("Password should be atleast 6 character long");
+                    //password.focus();
+                    return false;
+                }
+
+                if (year == "" ) {
+                    window.alert("Please enter yout year of studying");
+                    //email.focus();
+                    return false;
+                }
+                
+                return true;
+            }
+        </script>
+        
+        
+        
+        </script>
+    <body>
+       <div class="container">
+        <form class="FORM" id="form" name="login" onsubmit=" return storedata()" method="post" action="msg.html">
+            <h1>REGISTRATION </h1>
+            
+
+            <label>NAME</label>
+            <br>
+            <input type="text" name="name" placeholder="NAME" id="name"></input>
+            <br>
+
+           
+
+            
+            <label>EMAIL ID</label>
+            <br>
+            <input type="email" name="mail" placeholder="EMAIL OR PHONE NUMBER" id="mail"></input>
+       
+             <br>
+
+            
+            <label>PASSWORD</label>
+            <br>
+            <input type="password" name="password" placeholder="PASSWORD" id="password"></input>
+
+            
+       
+            <br>
+            <label>YEAR OF STUDYING</label>
+            <input type="number" name="year" placeholder="YEAR" id="year"></input>
+            <br>
+            
+            <label>QUALIFICATION</label>
+
+            <select id="dropdown" name="qualification">
+                <option>BTECH</option>
+                <option>BE</option>
+            </select>
+            <br>
+            <br>
+
+            <label>UPLOAD RESUME</label>
+            <input type="file"  value="choose_file" name="file upload"/>
+            <br>
+
+            
+            <button type="submit">SUBMIT</button>
+           
+            
+
+        </form>
+        </div>
+
+       
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
